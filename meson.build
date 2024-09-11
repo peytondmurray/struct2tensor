@@ -28,23 +28,12 @@ inc_tf = include_directories(incdir_tf)
 tf_dep = declare_dependency(include_directories: inc_tf)
 
 
-includes = include_directories(
-  [
-    incdir_tf,
-    # 'stringdtype/src'
-  ]
-)
-
-# srcs = [
-#   'stringdtype/src/casts.c',
-#   'stringdtype/src/casts.h',
-#   'stringdtype/src/dtype.c',
-#   'stringdtype/src/main.c',
-#   'stringdtype/src/static_string.c',
-#   'stringdtype/src/static_string.h',
-#   'stringdtype/src/umath.c',
-#   'stringdtype/src/umath.h',
-# ]
+# includes = include_directories(
+#   [
+#     incdir_tf,
+#     # 'stringdtype/src'
+#   ]
+# )
 
 subdir('struct2tensor')
 

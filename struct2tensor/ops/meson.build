@@ -15,12 +15,3 @@ py.install_sources(
   subdir: 'struct2tensor/ops',
   pure: false
 )
-
-py.extension_module(
-    '_parquet_dataset_op',
-    srcs: [
-      'parquet_dataset_op.cc',
-    ]
-    install: true,
-    subdir: 'versioned_hdf5',
-)

@@ -40,4 +40,69 @@ subdir('testdata')
 subdir('tools')
 
 
-kernels_parquet =
+# Ops
+py.extension_module(
+  '_decode_proto_map_op',
+  srcs: [
+    'ops/parquet_dataset_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+)
+
+# depends on tensorflow/core:framework
+py.extension_module(
+  '_decode_proto_sparse_op',
+  srcs: [
+    'ops/decode_proto_sparse_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+  dependencies: [tf_dep],
+)
+
+# depends on equi_join_any_indices_op_dynamic
+py.extension_module(
+  '_equi_join_any_indices_op',
+  srcs: [
+    'ops/equi_join_any_indices_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+)
+
+
+# depends on tensorflow/core:framework
+py.extension_module(
+  '_equi_join_indices_op',
+  srcs: [
+    'ops/equi_join_indices_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+  dependencies: [tf_dep],
+)
+
+# depends on
+# tensorflow/core:dataset_ops_op_lib
+# tensorflow/core:framework
+py.extension_module(
+  '_parquet_dataset_op',
+  srcs: [
+    'ops/parquet_dataset_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+  dependencies: [tf_dep],
+)
+
+# depends on
+# run_length_before_op_dynamic
+py.extension_module(
+  '_run_length_before_op',
+  srcs: [
+    'ops/run_length_before_op.cc',
+  ],
+  install: true,
+  subdir: 'struct2tensor/ops',
+)
