@@ -38,3 +38,6 @@ subdir('proto')
 subdir('test')
 subdir('testdata')
 subdir('tools')
+
+
+kernels_parquet =

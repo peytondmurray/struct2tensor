@@ -1,5 +1,3 @@
-subdir('parquet')
-
 shared_library(
   'run_length_before_op_dynamic',
   [
@@ -7,11 +5,4 @@ shared_library(
   ]
 )
 
-py.extension_module(
-  '_main',
-  srcs,
-  install: true,
-  subdir: 'stringdtype',
-  include_directories: includes,
-  dependencies: [np_dep, npymath_lib]
-)
+subdir('parquet')

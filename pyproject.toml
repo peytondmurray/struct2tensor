@@ -7,7 +7,7 @@ build-backend = "mesonpy"
 
 [project]
 name = "struct2tensor"
-dynamic = ["version", "dependencies", "optional-dependencies", "scripts"]
+dynamic = ["version"]
 description = "Struct2Tensor is a package for parsing and manipulating structured data for TensorFlow"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -35,7 +35,7 @@ classifiers = [
     'Topic :: Software Development :: Libraries :: Python Modules',
 ]
 keywords = ["tensorflow", "protobuf", "machine", "learning"]
-requires-python = ">=3.9,<=3.11"
+requires-python = ">=3.9,<3.12"
 dependencies = [
     "numpy>=1.22",
     'protobuf>=4.25.2,<5;python_version>="3.11"',
